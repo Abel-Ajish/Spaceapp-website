@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Space Apps - Modern Tech Solutions">
+    <meta name="theme-color" content="#667eea">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Space Apps - Modern Tech Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- dark.css integrated into style.css -->
+    <link rel="icon" href="favicon.ico">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <svg width="32" height="32" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="20" cy="20" r="16" stroke="currentColor" stroke-width="2.5" fill="none" />
+                    <ellipse cx="20" cy="20" rx="13" ry="4" stroke="currentColor" stroke-width="2" />
+                    <circle cx="27" cy="15" r="1.5" fill="currentColor" />
+                    <circle cx="15" cy="25" r="1.2" fill="currentColor" />
+                </svg>
+                <span>Space Apps</span>
+            </div>
+            <button class="nav-hamburger" aria-label="Open menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links">
+                <a href="#home" class="nav-link" data-section="home">Home</a>
+                <a href="#about-syncspace" class="nav-link" data-section="about-syncspace">SyncSpace</a>
+                <a href="#about-studyspace" class="nav-link" data-section="about-studyspace">StudySpace</a>
+                <a href="https://status.spaceapp.rf.gd/" class="nav-link" target="_blank">Status</a>
+            </div>
+            <button id="dark-mode-toggle" aria-label="Toggle dark mode">
+                <svg class="cs-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480"
+                    style="enable-background:new 0 0 480 480" xml:space="preserve">
+                    <path
+                        d="M459.782 347.328c-4.288-5.28-11.488-7.232-17.824-4.96-17.76 6.368-37.024 9.632-57.312 9.632-97.056 0-176-78.976-176-176 0-58.4 28.832-112.768 77.12-145.472 5.472-3.712 8.096-10.4 6.624-16.832S285.638 2.4 279.078 1.44C271.59.352 264.134 0 256.646 0c-132.352 0-240 107.648-240 240s107.648 240 240 240c84 0 160.416-42.688 204.352-114.176 3.552-5.792 3.04-13.184-1.216-18.496z">
+                    </path>
+                </svg>
+                <svg class="cs-sun" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+                    fill="none" stroke="orange" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5" />
+                    <line x1="12" y1="1" x2="12" y2="3" />
+                    <line x1="12" y1="21" x2="12" y2="23" />
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                    <line x1="1" y1="12" x2="3" y2="12" />
+                    <line x1="21" y1="12" x2="23" y2="12" />
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Home Section -->
+        <section id="home" class="page-section active">
+            <!-- Hero Section -->
+            <div class="hero-section">
+                <div class="blob"
+                    style="top: 10%; left: 10%; width: 300px; height: 300px; background: var(--md-sys-color-primary-container); border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;">
+                </div>
+                <div class="blob"
+                    style="bottom: 10%; right: 10%; width: 400px; height: 400px; background: var(--md-sys-color-tertiary-container); border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; animation-duration: 25s; animation-direction: reverse;">
+                </div>
+                <div class="hero-content">
+                    <h1 class="hero-title">Empowering your digital journey</h1>
+                    <p class="hero-subtitle">
+                        Join the millions of users that use Space Apps to connect, learn, and build amazing experiences.
+                        Modern solutions for modern problems.
+                    </p>
+                    <div class="hero-actions">
+                        <button id="start-now-btn" class="btn btn-primary">Start now</button>
+                        <a href="#upcoming-projects" class="btn btn-secondary">Upcoming Projects</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Products Section -->
+            <div class="products-section">
+                <div class="section-header">
+                    <h2>A fully integrated suite of modern tech solutions</h2>
+                    <p>Reduce complexity, grow engagement, and run your digital life more efficiently with our
+                        integrated, AI-powered platform.</p>
+                </div>
+
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-icon">
+                            <span>🔗</span>
+                        </div>
+                        <h3>SyncSpace</h3>
+                        <p>Real-time video chat and synchronized YouTube watching. Create or join rooms instantly, chat,
+                            react, and enjoy fun effects.</p>
+                        <div class="product-actions">
+                            <button id="syncspace-unavailable-btn" class="btn btn-primary">Open SyncSpace</button>
+                            <a href="#about-syncspace" class="btn btn-outline" data-section="about-syncspace">Learn
+                                more</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 21V7"></path>
+                                <path d="m16 12 2 2 4-4"></path>
+                                <path
+                                    d="M22 6V4a1 1 0 0 0-1-1h-5a4 4 0 0 0-4 4 4 4 0 0 0-4-4H3a1 1 0 0 0-1 1v13a1 1 0 0 0 1 1h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6a1 1 0 0 0 1-1v-1.3">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3>StudySpace</h3>
+                        <p>Organize your learning, track progress, and create study materials efficiently. Smart
+                            scheduling, flashcards, and gamified progress.</p>
+                        <div class="product-actions">
+                            <button onclick="window.open('https://studyspace.spaceapp.rf.gd/', '_blank')"
+                                class="btn btn-primary">Open StudySpace</button>
+                            <a href="#about-studyspace" class="btn btn-outline" data-section="about-studyspace">Learn
+                                more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Upcoming Projects Section -->
+        <section id="upcoming-projects" class="page-section">
+            <div class="about-container">
+                <div class="about-header">
+                    <h1>Upcoming Projects</h1>
+                </div>
+                <div class="about-content" style="display:flex; flex-direction:column; align-items:center;">
+                    <div id="cashspace-card" class="product-card"
+                        style="max-width:420px; margin:0 auto; text-align:center;">
+                        <div class="product-icon" style="margin: 0 auto 1.2rem auto;">
+                            <span style="font-size:2.2rem;">💸</span>
+                        </div>
+                        <h3 style="font-size:2rem; font-weight:700; margin-bottom:0.7rem;">CashSpace</h3>
+                        <p style="color:var(--text-secondary); margin-bottom:1.5rem;">A modern, visual, and easy-to-use
+                            personal finance tracker for students and young professionals.</p>
+                        <div class="product-actions" style="align-items:center;">
+                            <button class="btn btn-primary btn-disabled" disabled
+                                style="width:100%;margin-bottom:0.7rem;">Development in Progress</button>
+                            <button id="cashspace-learnmore-btn" class="btn btn-outline" style="width:100%;">Learn
+                                more</button>
+                        </div>
+                    </div>
+                    <div id="cashspace-details"
+                        style="display:none; width:100%; max-width:900px; margin:2.5rem auto 0 auto;">
+                        <div class="about-header" style="margin-bottom:1.5rem;">
+                            <h2 style="font-size:2rem;">About CashSpace</h2>
+                            <p class="about-subtitle">Your smart personal finance tracker</p>
+                        </div>
+                        <div class="about-content">
+                            <div class="about-description">
+                                <p>CashSpace helps you manage your money with smart features and a beautiful UI. Track
+                                    your expenses, set budget goals, and visualize your progress—all in one place.</p>
+                            </div>
+                            <div class="features-grid">
+                                <div class="feature-item">
+                                    <div class="feature-icon">📊</div>
+                                    <h4>Dashboard</h4>
+                                    <p>Shows daily balance, budget left, and expense summary</p>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">➕</div>
+                                    <h4>Add Expense / Income</h4>
+                                    <p>Quick inputs with category (food, school, travel, etc.)</p>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">🏷️</div>
+                                    <h4>Categories</h4>
+                                    <p>Customizable expense types (icons + colors)</p>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">🎯</div>
+                                    <h4>Budget Goals</h4>
+                                    <p>Set monthly spending limits by category</p>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">📈</div>
+                                    <h4>Progress Bar / Pie Chart</h4>
+                                    <p>Visualise usage (e.g., 80% of food budget used)</p>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">📅</div>
+                                    <h4>CashFlow Timeline</h4>
+                                    <p>List of daily transactions, color-coded</p>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">💰</div>
+                                    <h4>Savings Jar</h4>
+                                    <p>Option to move your money into a "savings jar" from main wallet</p>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">⏰</div>
+                                    <h4>Reminder / Alerts</h4>
+                                    <p>"You're close to your budget!" alerts</p>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">☁️</div>
+                                    <h4>Backup Option</h4>
+                                    <p>Export to Google Drive / CSV</p>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">🌙</div>
+                                    <h4>Dark Mode / Theme Toggle</h4>
+                                    <p>Modern UI bonus!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        style="text-align:center; margin: 2rem 0 1.2rem 0; color: var(--text-secondary); font-size: 1.15rem; font-weight: 500;">
+                        More apps coming soon...</div>
+                    <div class="about-actions" style="text-align:center; margin-top:0;">
+                        <a href="#home" class="btn btn-primary back-btn" data-section="home">← Back to Home</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About SyncSpace Section -->
+        <section id="about-syncspace" class="page-section">
+            <div class="about-container">
+                <div class="about-header">
+                    <h1>About SyncSpace</h1>
+                    <p class="about-subtitle">Real-time collaboration made simple</p>
+                </div>
+                <div class="about-content">
+                    <div class="about-description">
+                        <p>SyncSpace is a cross-platform, real-time video chat and synchronized YouTube-watching app
+                            with a modern, mobile-friendly UI and fun interactive features. Instantly create or join
+                            rooms, chat, react, and enjoy synchronized playback with friends, family, or remote teams.
+                            No sign-up required!</p>
+                    </div>
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <div class="feature-icon">🎥</div>
+                            <h4>Instant video call rooms</h4>
+                            <p>No sign-up required, just create or join with a code</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">📞</div>
+                            <h4>Peer-to-peer calls</h4>
+                            <p>High-quality video and audio with mute/camera controls</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">📺</div>
+                            <h4>Synchronized YouTube</h4>
+                            <p>Watch videos together with perfect sync</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">💬</div>
+                            <h4>Real-time chat</h4>
+                            <p>Send messages and react with emojis</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🎉</div>
+                            <h4>Fun effects</h4>
+                            <p>Confetti, emoji rain, and interactive surprises</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🎨</div>
+                            <h4>Dynamic theming</h4>
+                            <p>Multiple themes and mobile-optimized UI</p>
+                        </div>
+                    </div>
+                    <div class="about-actions">
+                        <a href="#home" class="btn btn-primary back-btn" data-section="home">← Back to Home</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About StudySpace Section -->
+        <section id="about-studyspace" class="page-section">
+            <div class="about-container">
+                <div class="about-header">
+                    <h1>About StudySpace</h1>
+                    <p class="about-subtitle">Your smart study companion</p>
+                </div>
+                <div class="about-content">
+                    <div class="about-description">
+                        <p>StudySpace is a smart, modern web app to help students organize learning, track progress, and
+                            create study materials efficiently. Enjoy secure login, personalized schedules, flashcards,
+                            notes, and gamified progress—all in one place.</p>
+                    </div>
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <div class="feature-icon">🔐</div>
+                            <h4>Secure authentication</h4>
+                            <p>Safe and secure login with email verification</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">📅</div>
+                            <h4>Smart scheduling</h4>
+                            <p>AI-powered personalized study schedules</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🤖</div>
+                            <h4>AI flashcard generation</h4>
+                            <p>Instantly create flashcards from your notes</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🔄</div>
+                            <h4>Spaced repetition</h4>
+                            <p>Smart review system for better retention</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">📝</div>
+                            <h4>Progress tracking</h4>
+                            <p>Visual progress charts and analytics</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🏆</div>
+                            <h4>Gamification</h4>
+                            <p>Earn points and stay motivated</p>
+                        </div>
+                    </div>
+                    <div class="about-actions">
+                        <a href="#home" class="btn btn-primary back-btn" data-section="home">← Back to Home</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- End of main-container -->
+    <!-- SyncSpace Maintenance Modal -->
+    <div id="syncspace-modal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <h2>Website Suspended for Maintenance</h2>
+            <p>SyncSpace is currently suspended for maintenance.<br>You may continue anyway, but the website may not be
+                available.</p>
+            <div style="display:flex; gap:1rem; justify-content:center; margin-top:1.5rem;">
+                <button id="syncspace-modal-continue" class="btn btn-primary">Continue Anyway</button>
+                <button id="syncspace-modal-cancel" class="btn btn-outline"
+                    style="background:transparent;color:var(--primary);border:1px solid var(--primary);"
+                    onmouseover="this.style.background='var(--primary)';this.style.color='#fff';"
+                    onmouseout="this.style.background='transparent';this.style.color='var(--primary)';">Close</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
