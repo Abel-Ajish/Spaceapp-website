@@ -288,6 +288,12 @@ p {
     text-decoration: none;
     position: relative;
     overflow: hidden;
+    text-align: center;
+    line-height: normal;
+    min-height: 48px;
+    height: auto;
+    padding: 0.5rem 1.5rem;
+    /* Ensure padding for multiline */
 }
 
 .btn:active {
@@ -340,6 +346,8 @@ p {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    scroll-margin-top: 80px;
+    /* Offset for fixed navbar */
 }
 
 .section-header {
@@ -350,9 +358,11 @@ p {
 
 .product-card {
     background-color: var(--md-sys-color-surface-variant);
-    /* Fallback */
-    background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01));
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    /* Improved visibility for dark mode */
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
 
     [data-theme='light'] & {
         background: linear-gradient(145deg, #ffffff, #f8f9fa);
@@ -385,6 +395,13 @@ p {
     justify-content: center;
     font-size: 2rem;
     margin-bottom: 1.5rem;
+}
+
+.product-actions {
+    margin-top: auto;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
 }
 
 /* Hero Section */
@@ -581,5 +598,97 @@ p {
     to {
         transform: scale(4);
         opacity: 0;
+    }
+}
+
+/* Modal */
+.modal {
+    display: none;
+    /* Hidden by default, toggled by JS */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    /* Handled by animation */
+}
+
+.modal-content {
+    background: var(--md-sys-color-surface);
+    color: var(--md-sys-color-on-surface);
+    padding: 2.5rem;
+    border-radius: var(--md-sys-shape-corner-extra-large);
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    border: 1px solid var(--md-sys-color-outline);
+    position: relative;
+    opacity: 0;
+    /* Handled by animation */
+    transform: scale(0.9);
+    /* Handled by animation */
+}
+
+/* Fix for buttons in modal if needed */
+#syncspace-modal-cancel.btn-outline-primary {
+    border-color: var(--md-sys-color-primary);
+    color: var(--md-sys-color-primary);
+}
+
+#syncspace-modal-cancel.btn-outline-primary:hover {
+    background-color: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+}
+
+/* Fixed Footer */
+.fixed-footer {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    background: var(--md-sys-color-surface-variant);
+    color: var(--md-sys-color-on-surface);
+    border-radius: var(--md-sys-shape-corner-full);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+    z-index: 100;
+    border: 1px solid transparent;
+}
+
+.fixed-footer:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    background: var(--md-sys-color-surface);
+    border-color: var(--md-sys-color-outline);
+}
+
+.fixed-footer svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    color: var(--md-sys-color-primary);
+}
+
+/* Mobile check for footer */
+@media (max-width: 768px) {
+    .fixed-footer {
+        bottom: 1rem;
+        right: 1rem;
+        padding: 0.5rem 1rem;
+        font-size: 0.75rem;
     }
 }

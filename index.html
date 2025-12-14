@@ -41,6 +41,7 @@
                 <a href="#home" class="nav-link" data-section="home">Home</a>
                 <a href="#about-syncspace" class="nav-link" data-section="about-syncspace">SyncSpace</a>
                 <a href="#about-studyspace" class="nav-link" data-section="about-studyspace">StudySpace</a>
+                <a href="#about-Fileshare" class="nav-link" data-section="about-Fileshare">Fileshare</a>
                 <a href="https://status.spaceapp.rf.gd/" class="nav-link" target="_blank">Status</a>
             </div>
             <button id="dark-mode-toggle" aria-label="Toggle dark mode">
@@ -85,14 +86,14 @@
                         Modern solutions for modern problems.
                     </p>
                     <div class="hero-actions">
-                        <button id="start-now-btn" class="btn btn-primary">Start now</button>
+                        <a href="#products-section" class="btn btn-primary">Start now</a>
                         <a href="#upcoming-projects" class="btn btn-secondary">Upcoming Projects</a>
                     </div>
                 </div>
             </div>
 
             <!-- Products Section -->
-            <div class="products-section">
+            <div id="products-section" class="products-section">
                 <div class="section-header">
                     <h2>A fully integrated suite of modern tech solutions</h2>
                     <p>Reduce complexity, grow engagement, and run your digital life more efficiently with our
@@ -132,6 +133,26 @@
                             <button onclick="window.open('https://studyspace.spaceapp.rf.gd/', '_blank')"
                                 class="btn btn-primary">Open StudySpace</button>
                             <a href="#about-studyspace" class="btn btn-outline" data-section="about-studyspace">Learn
+                                more</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="17 8 12 3 7 8"></polyline>
+                                <line x1="12" y1="3" x2="12" y2="15"></line>
+                            </svg>
+                        </div>
+                        <h3>Fileshare</h3>
+                        <p>Fast, secure, and simple file transfers. End-to-end encryption, temporary links, and large
+                            file support.</p>
+                        <div class="product-actions">
+                            <button onclick="window.open('https://filespace.vercel.app', '_blank')"
+                                class="btn btn-primary">Open Fileshare</button>
+                            <a href="#about-Fileshare" class="btn btn-outline" data-section="about-Fileshare">Learn
                                 more</a>
                         </div>
                     </div>
@@ -340,6 +361,57 @@
                 </div>
             </div>
         </section>
+
+        <!-- About Fileshare Section -->
+        <section id="about-Fileshare" class="page-section">
+            <div class="about-container">
+                <div class="about-header">
+                    <h1>About Fileshare</h1>
+                    <p class="about-subtitle">Fast, secure, and simple file transfers</p>
+                </div>
+                <div class="about-content">
+                    <div class="about-description">
+                        <p>Fileshare is a powerful tool for sharing files of any size, securely and easily. With
+                            end-to-end encryption and time-limited links, you stay in control of your data.</p>
+                    </div>
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <div class="feature-icon">🔒</div>
+                            <h4>Secure transfers</h4>
+                            <p>End-to-end encryption and HTTPS to protect files in transit and at rest.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">⏲️</div>
+                            <h4>Temporary share links</h4>
+                            <p>Create time-limited or one-time-download links to control access.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">📤</div>
+                            <h4>Resumable uploads</h4>
+                            <p>Support for chunked uploads so large files can be sent reliably.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">📂</div>
+                            <h4>Drag-and-drop</h4>
+                            <p>Intuitive interface allowing multiple files or folders to be uploaded at once.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">👁️</div>
+                            <h4>Access controls</h4>
+                            <p>Password protection, user auth, and basic logging of downloads.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🔌</div>
+                            <h4>Lightweight integrations</h4>
+                            <p>Easy to integrate via shareable links or simple API/CLI.</p>
+                        </div>
+                    </div>
+                    <div class="about-actions">
+                        <a href="#home" class="btn btn-primary back-btn" data-section="home">← Back to Home</a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
     <!-- End of main-container -->
     <!-- SyncSpace Maintenance Modal -->
@@ -350,13 +422,18 @@
                 available.</p>
             <div style="display:flex; gap:1rem; justify-content:center; margin-top:1.5rem;">
                 <button id="syncspace-modal-continue" class="btn btn-primary">Continue Anyway</button>
-                <button id="syncspace-modal-cancel" class="btn btn-outline"
-                    style="background:transparent;color:var(--primary);border:1px solid var(--primary);"
-                    onmouseover="this.style.background='var(--primary)';this.style.color='#fff';"
-                    onmouseout="this.style.background='transparent';this.style.color='var(--primary)';">Close</button>
+                <button id="syncspace-modal-cancel" class="btn btn-outline btn-outline-primary">Close</button>
             </div>
         </div>
     </div>
+    <!-- Footer -->
+    <a href="https://github.com/Abel-Ajish" target="_blank" class="fixed-footer">
+        <span>Designed & Built by Abel A</span>
+        <svg viewBox="0 0 24 24">
+            <path
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+        </svg>
+    </a>
     <script src="script.js"></script>
 </body>
 

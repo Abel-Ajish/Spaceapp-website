@@ -115,10 +115,16 @@ const Navigation = {
         } else if (href && href.startsWith('#')) {
             e.preventDefault();
             const sectionId = href.substring(1);
-            if (document.getElementById(sectionId)) {
-                // If we are already on the page and just scrolling to an anchor (unlikely in this SPA setup but possible)
-                // Actually, in this SPA, IDs are "pages". So we switch.
-                this.switchSection(sectionId);
+            const targetElement = document.getElementById(sectionId);
+            
+            if (targetElement) {
+                // Check if the target is a main page section
+                if (targetElement.classList.contains('page-section')) {
+                    this.switchSection(sectionId);
+                } else {
+                    // It's just an anchor inside the current view, scroll to it
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
             }
         }
     },
@@ -189,20 +195,43 @@ const Interactive = {
             syncspaceBtn.addEventListener('click', (e) => {
                 e.preventDefault();
                 modal.style.display = 'flex';
-                // Animate modal in
+                
+                // Animate Backdrop (Fade only)
                 modal.animate([
-                    { opacity: 0, transform: 'scale(0.9)' },
-                    { opacity: 1, transform: 'scale(1)' }
+                    { opacity: 0 },
+                    { opacity: 1 }
                 ], { duration: 300, easing: 'ease-out', fill: 'forwards' });
+
+                // Animate Content (Fade + Scale)
+                const content = modal.querySelector('.modal-content');
+                if (content) {
+                    content.animate([
+                        { opacity: 0, transform: 'scale(0.9)' },
+                        { opacity: 1, transform: 'scale(1)' }
+                    ], { duration: 400, easing: 'cubic-bezier(0.34, 1.56, 0.64, 1)', fill: 'forwards' });
+                }
             });
 
             // Close actions
             const close = () => {
-                const anim = modal.animate([
-                    { opacity: 1, transform: 'scale(1)' },
-                    { opacity: 0, transform: 'scale(0.9)' }
-                ], { duration: 200, easing: 'ease-in' });
-                anim.onfinish = () => modal.style.display = 'none';
+                // Animate Backdrop Out
+                const backdropAnim = modal.animate([
+                    { opacity: 1 },
+                    { opacity: 0 }
+                ], { duration: 200, easing: 'ease-in', fill: 'forwards' });
+
+                // Animate Content Out
+                const content = modal.querySelector('.modal-content');
+                if (content) {
+                    content.animate([
+                        { opacity: 1, transform: 'scale(1)' },
+                        { opacity: 0, transform: 'scale(0.9)' }
+                    ], { duration: 200, easing: 'ease-in', fill: 'forwards' });
+                }
+
+                backdropAnim.onfinish = () => {
+                    modal.style.display = 'none';
+                };
             };
 
             btns.forEach(btn => {
